@@ -14,7 +14,7 @@ The memory and cache system is composed of the following modules:
 
 A block diagram of this is shown below:
 
-![http://hmc-mips.googlecode.com/svn/trunk/images/mem.gif](http://hmc-mips.googlecode.com/svn/trunk/images/mem.gif)
+![](https://github.com/carlpny/hmc-mips/blob/master/images/mem.gif)
 
 ## Memory Interface Conventions
 
@@ -29,7 +29,7 @@ All of the primary memory and cache system modules follow a common interface con
 
 Most of the modules include the interface convention twice, one for requests from "lower" modules to the module and one for requests from the module to a "higher" module.  "Lower" and "higher" modules refer to the position of the module within the memory hierarchy shown below.  For example, from the write buffer's perspective, the "lower" module is the caches and the "higher" module is external memory.
 
-![http://hmc-mips.googlecode.com/svn/trunk/images/memhier.gif](http://hmc-mips.googlecode.com/svn/trunk/images/memhier.gif)
+![](https://github.com/carlpny/hmc-mips/blob/master/images/memhier.gif)
 
 We'll call the "lower" module requesting a memory operation the master and the current module executing the operation the slave.  When the slave's input pins (adr, data, rwb, etc..) from the master are valid, the master asserts en.  En must be asserted for the entire duration of the operation. The slave will execute the operation until completion, where it will drive necessary pins to the master and assert done. There will always be at least a one cycle latency between the master asserting en and the slave asserting done, except between the MIPS processor/cache interface (for reading) and the external memory interface.
 
