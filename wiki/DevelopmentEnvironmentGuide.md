@@ -16,8 +16,8 @@ _Note:_ If you want to develop C code software for the HMC MIPS chip, then you a
   * Using Windows Explorer, browse to the directory to place the source tree in.
   * Right-click the folder background and select "SVN Checkout..."
   * Fill out the form as in the image:
-
-![http://hmc-mips.googlecode.com/svn/trunk/images/checkout1.jpg](http://hmc-mips.googlecode.com/svn/trunk/images/checkout1.jpg)
+  * 
+![](https://github.com/carlpny/hmc-mips/blob/master/images/checkout1.jpg)
 
 # Creating the Xilinx Project
 
@@ -28,17 +28,17 @@ The Xilinx project file format is not friendly to version control.  To avoid irr
   * Set Project Name to "hmc-mips"
   * Change the Project Location to the exact path to the root of the SVN tree (where you checked out the code, **NOT** the "src" subdirectory and **NOT** a new subdirectory called hmc-mips)
 
-![http://hmc-mips.googlecode.com/svn/trunk/images/newproject1.jpg](http://hmc-mips.googlecode.com/svn/trunk/images/newproject1.jpg)
+![](https://github.com/carlpny/hmc-mips/blob/master/images/newproject1.jpg)
 
   * Click next, make the details the same as this:
 
-![http://hmc-mips.googlecode.com/svn/trunk/images/newproject2.jpg](http://hmc-mips.googlecode.com/svn/trunk/images/newproject2.jpg)
+![](https://github.com/carlpny/hmc-mips/blob/master/images/newproject2.jpg)
 
   * Click next, next.
   * In the Add Existing Sources dialog, select "Add Source."  Add all the source files that are in the svn tree.  (At the time of this writing, this is all the .v files in the src and testing subdirectories)
   * **Uncheck** "Copy to project" -- we want to be working on the same version that Subversion manages. Note that there will likely be several more files than shown in the screenshot below.
 
-![http://hmc-mips.googlecode.com/svn/trunk/images/newproject3.jpg](http://hmc-mips.googlecode.com/svn/trunk/images/newproject3.jpg)
+![](https://github.com/carlpny/hmc-mips/blob/master/images/newproject3.jpg)
 
   * Click next, finish.
   * Click OK when the "Adding Source Files..." dialog comes up
@@ -50,7 +50,7 @@ The Xilinx project file format is not friendly to version control.  To avoid irr
   * Select "testbench" in the hierachy.
   * In the Processes window, expand "Modelsim Simulator" and double click "Simulate model behavior.
 
-![http://hmc-mips.googlecode.com/svn/trunk/images/behavior1.jpg](http://hmc-mips.googlecode.com/svn/trunk/images/behavior1.jpg)
+![](https://github.com/carlpny/hmc-mips/blob/master/images/behavior1.jpg)
 
   * When Modelsim loads, type "run" a few times.  If everything works, "Simulation Succeeded" or some similar positive message will come up. **Note: Testing is likely to change significantly from this description, see the [testing documentation](TestingGuide.md) for more details.**
 ```
@@ -74,7 +74,7 @@ For the sake of consistent style, use two spaces for tabbing.
 ### Editing in ISE
 Change your settings as following in ISE:
 
-![http://hmc-mips.googlecode.com/svn/trunk/images/editor_options.jpg](http://hmc-mips.googlecode.com/svn/trunk/images/editor_options.jpg)
+![](https://github.com/carlpny/hmc-mips/blob/master/images/editor_options.jpg)
 
 ### Editing in vim
 
